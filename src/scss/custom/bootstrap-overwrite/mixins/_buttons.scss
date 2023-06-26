@@ -1,0 +1,8 @@
+// Button sizes
+@mixin button-size-asymmetrically($padding-t, $padding-x, $padding-b, $font-size, $line-height, $border-radius) {
+    padding: $padding-t $padding-x $padding-b;
+    @include font-size($font-size);
+    line-height: $line-height;
+    // Manually declare to provide an override to the browser default
+    @include border-radius($border-radius, 0);
+}

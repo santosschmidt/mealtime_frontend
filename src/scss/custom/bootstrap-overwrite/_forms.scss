@@ -1,0 +1,55 @@
+.form-control {
+  padding: $input-padding-y $input-padding-x $input-padding-y - 0.125rem;
+
+  &:focus {
+    border-color: $border-color;
+    outline: 2px $petrol solid;
+    box-shadow: none;
+  }
+}
+
+.form-select {
+  padding: $input-padding-y $input-padding-x $input-padding-y - 0.125rem;
+  
+  &:focus {
+    border-color: $border-color;
+    outline: 2px #238c96 solid;
+    box-shadow: none;
+  }
+}
+
+.form-check-input {
+  &:focus {
+    border-color: $border-color;
+    outline: 2px $petrol solid;
+    box-shadow: none;
+  }
+}
+
+.custom-control-input {
+  &.ng-valid {
+
+    &.ng-touched:not([ng-reflect-model=""])~.custom-control-label,
+    &.ng-untouched:not([ng-reflect-model=""])~.custom-control-label {
+      color: black;
+    }
+
+    &.ng-touched:checked:not([ng-reflect-model=""])~.custom-control-label::before,
+    &.ng-untouched:checked:not([ng-reflect-model=""])~.custom-control-label::before {
+      border-color: grey;
+      background: black;
+    }
+
+    &.ng-touched {
+
+      &:not([ng-reflect-model=""])~.custom-control-label::before,
+      &:focus:not(:checked):not([ng-reflect-model=""])~.custom-control-label::before {
+        border-color: grey;
+      }
+    }
+  }
+
+  &:not(:disabled):active~.custom-control-label::before {
+    background-color: transparent;
+  }
+}

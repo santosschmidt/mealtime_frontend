@@ -1,0 +1,61 @@
+.btn {
+  @include button-size-asymmetrically($btn-padding-y, $btn-padding-x, $btn-padding-y - 0.125rem, $btn-font-size, $btn-line-height, $btn-border-radius);
+}
+
+//
+// Alternate buttons
+//
+@each $color,
+$value in $theme-colors {
+  .btn-#{$color} {
+    text-transform: uppercase;
+    border: 1px solid $gray-300;
+    background-color: $value;
+    @if $color == 'dark' {
+      border: 1px solid transparent;
+    }
+    box-shadow: none;
+
+    &:disabled {
+      color: rgba($gray-900, 0.4);
+      opacity: initial;
+      border-color: $gray-300;
+      @if $color == 'dark' {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+.btn-primary, .btn-primary:disabled {
+  background-image: -webkit-gradient(linear, left bottom, left top, from($primary), to($primary-gradient));
+  background-image: -webkit-linear-gradient(bottom, $primary, $primary-gradient);
+  background-image: -moz-linear-gradient(bottom, $primary, $primary-gradient);
+  background-image: -o-linear-gradient(bottom, $primary, $primary-gradient);
+  background-image: linear-gradient(to top, $primary, $primary-gradient);
+  
+  &:hover {
+    border: 1px solid $gray-300;
+    background-color: $yellow-hover;
+  }
+}
+
+.btn-secondary, .btn-secondary:disabled {
+  background-image: -webkit-gradient(linear, left bottom, left top, from($secondary), to($light));
+  background-image: -webkit-linear-gradient(bottom, $secondary, $light);
+  background-image: -moz-linear-gradient(bottom, $secondary, $light);
+  background-image: -o-linear-gradient(bottom, $secondary, $light);
+  background-image: linear-gradient(to top, $secondary, $light);
+
+  &:hover {
+    border: 1px solid $gray-300;
+    background-color: $gray-200;
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-outline-#{$color} {
+    text-transform: uppercase;
+  }
+}

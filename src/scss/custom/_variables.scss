@@ -1,0 +1,94 @@
+/* enable */
+$enable-rounded: false;
+$enable-gradients: true;
+$enable-shadows: true;
+
+/* colors */
+$black: #000;
+$white: #fff;
+$red: #e2001a;
+$green: #3eb057;
+$cyan: rgb(35,140,150);
+$yellow: #ffed00;
+$yellow-gradient: #fff465;
+$yellow-hover: #fff362;
+$gray-100: #f8f8f8;
+$gray-200: #ededed;
+$gray-300: #e3e3e3;
+$gray-600: #757575;
+$gray-800: #333333;
+$gray-900: #2b2b2b;
+$primary: $yellow;
+$primary-gradient: $yellow-gradient;
+$secondary: $gray-200;
+$light: $gray-100;
+$petrol: #238c96;
+$border-color: $yellow;
+$info:$black;
+
+/* font */
+$font-family-sans-serif: ClanPro, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+$font-size-base: 0.8125rem;
+$h1-font-size: $font-size-base * 2.3077;
+$h2-font-size: $font-size-base * 1.5385;
+$h3-font-size: $font-size-base * 1.3846;
+$h4-font-size: $font-size-base * 1.0769;
+$h5-font-size: $font-size-base * 1.0769;
+$h6-font-size: $font-size-base * 0.9231;
+$btn-font-weight: 500;
+
+/* link */
+$link-color: $black;
+$link-hover-color: $link-color;
+$link-decoration: underline;
+
+/* headings */
+$headings-color: $gray-900;
+$headings-font-weight: 900;
+
+/* form */
+
+
+/* select */
+$form-select-bg-position: right 0.275rem center;
+$form-select-feedback-icon-position: center right 1.5rem;
+
+/* radio */
+$form-check-input-width: 1.5em;
+$form-check-min-height: 1.5em;
+$form-check-input-bg: $gray-100;
+$form-check-input-checked-color: $primary;
+$form-check-input-checked-bg-color: $black;
+$form-check-padding-start: $form-check-input-width + 0.625em;
+
+/* input */
+$input-btn-padding-x: 1.275rem;
+$input-btn-padding-y: .8125rem;
+$input-btn-focus-width: 0rem;
+$input-btn-padding-x-sm: .62rem;
+$input-height: 2.75rem;
+$form-floating-height: 3.141rem;
+$input-focus-box-shadow: 0 0 8px rgba($primary, .6);
+
+/* hr */
+$hr-border-color: $gray-300;
+$hr-margin-y: 0rem;
+
+/* navbar */
+$navbar-dark-active-color: $black;
+$navbar-dark-disabled-color: rgba($black, .25);
+$navbar-dark-toggler-border-color: rgba($black, .1);
+$navbar-dark-color: rgba($black, .5);
+$navbar-dark-hover-color: rgba($black, .75);
+$navbar-brand-height: 2.25rem;
+$navbar-padding-x: 0rem;
+$navbar-padding-y: 1.6875rem;
+
+/* tooltip */
+$tooltip-color: $black;
+$tooltip-bg: $primary;
+
+/* other */
+$spacer: 1.25rem;
+$line-height-base: 1.4;
+$component-active-color: $black;
