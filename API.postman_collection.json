@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "eaa41357-2e8a-4541-8bda-f10939098d4e",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25726661",
+		"_collection_link": "https://orange-resonance-3919.postman.co/workspace/Mealtime-Public-API~d0890553-cd1d-4c64-ac95-1321b0e2f736/collection/5298320-eaa41357-2e8a-4541-8bda-f10939098d4e?action=share&creator=25726661&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "Meals",
+					"item": [
+						{
+							"name": "SetMeal",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Host",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"date\": \"2023-03-03\",\r\n  \"time\": \"11:30\",\r\n  \"meal\": \"Gericht 1\",\r\n  \"cantine\": \"Cantine Winnenden\",\r\n  \"takeaway\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{Host}}/Meals/setMeal",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Meals",
+										"setMeal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteMeal",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Host",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"date\": \"2022-01-01\",\r\n  \"time\": \"9:00\",\r\n  \"meal\": \"Meal 1\",\r\n  \"cantine\": \"Cantine Winnenden\",\r\n  \"takeaway\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{Host}}/Meals/DeleteMeal",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Meals",
+										"DeleteMeal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteMealID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://{{Host}}/Meals/DeleteMealID?id=b6876399-dc00-4ce0-9182-f933a64b5015",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Meals",
+										"DeleteMealID"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "b6876399-dc00-4ce0-9182-f933a64b5015"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetMeals",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Host",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://{{Host}}/Meals/GetMeals",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Meals",
+										"GetMeals"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetMealsDay",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Host",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://{{Host}}/Meals/GetMealsDay?date=2023-02-28",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Meals",
+										"GetMealsDay"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2023-02-28"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetMealsUserDay",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Host",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://{{Host}}/Meals/GetMealsUserDay?date=2022-01-01",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Meals",
+										"GetMealsUserDay"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2022-01-01"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Points",
+					"item": [
+						{
+							"name": "UsePoints",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Host",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://{{Host}}/Points/UsePoints",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Points",
+										"UsePoints"
+									],
+									"query": [
+										{
+											"key": "points",
+											"value": "-10",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetPoints",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Host",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://{{Host}}/Points/GetPoints",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Points",
+										"GetPoints"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetPointsEntries",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Host",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://{{Host}}/Points/GetPointsEntries",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Points",
+										"GetPointsEntries"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Kaerchnernet",
+					"item": [
+						{
+							"name": "GetPlan",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://kaercher.net/canteen/daily-menu/NS5hZGRpdGl2ZV9zdHJpbmdfZm9yX2VuY29kZV9iYXNlNjQ=",
+									"protocol": "https",
+									"host": [
+										"kaercher",
+										"net"
+									],
+									"path": [
+										"canteen",
+										"daily-menu",
+										"NS5hZGRpdGl2ZV9zdHJpbmdfZm9yX2VuY29kZV9iYXNlNjQ="
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authorization",
+					"item": [
+						{
+							"name": "Authorized",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{Host}}/Authorization/IsAuthorizedCanteen",
+									"protocol": "https",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"Authorization",
+										"IsAuthorizedCanteen"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "clientSecret",
+				"value": "{{ClientSecret}}",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "mealtime-api:full",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "test",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code_with_pkce",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://{{Authority}}/connect/authorize",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://{{Authority}}/connect/token",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{ClientId}}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
